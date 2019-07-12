@@ -1,0 +1,5 @@
+type Owner @model {
+  id: ID!
+  name: String!
+  imageUrl: String
+}

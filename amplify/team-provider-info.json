@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "gardening-dev-20190713094359-authRole",
+            "UnauthRoleArn": "arn:aws:iam::061428388682:role/gardening-dev-20190713094359-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::061428388682:role/gardening-dev-20190713094359-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "gardening-dev-20190713094359-deployment",
+            "UnauthRoleName": "gardening-dev-20190713094359-unauthRole",
+            "StackName": "gardening-dev-20190713094359",
+            "StackId": "arn:aws:cloudformation:us-east-1:061428388682:stack/gardening-dev-20190713094359/ed4807c0-a4fe-11e9-8ed2-0a7c2d2d58f6"
+        }
+    }
+}
