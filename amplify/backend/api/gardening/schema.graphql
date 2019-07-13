@@ -1,5 +1,10 @@
 type Owner @model {
   id: ID!
   name: String!
-  imageUrl: String
+  gardenType: String
+  plant1: String
+  plant2: String
+  plant3: String
+  address: String
+  note: String
 }
