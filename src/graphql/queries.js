@@ -5,7 +5,12 @@ export const getOwner = `query GetOwner($id: ID!) {
   getOwner(id: $id) {
     id
     name
-    imageUrl
+    gardenType
+    plant1
+    plant2
+    plant3
+    address
+    note
   }
 }
 `;
@@ -18,7 +23,12 @@ export const listOwners = `query ListOwners(
     items {
       id
       name
-      imageUrl
+      gardenType
+      plant1
+      plant2
+      plant3
+      address
+      note
     }
     nextToken
   }
