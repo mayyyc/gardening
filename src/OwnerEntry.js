@@ -7,6 +7,7 @@ import * as mutations from "./graphql/mutations";
 import { Redirect } from "react-router-dom";
 
 const Container = styled.div`
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
