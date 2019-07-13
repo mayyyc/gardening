@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import Amplify from "aws-amplify";
+import aws_exports from "./aws-exports";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import OwnerEntry from "./OwnerEntry";
+import Home from "./Home";
+import Navbar from "react-bootstrap/Navbar";
+import GardenerEntry from "./GardenerEntry";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+Amplify.configure(aws_exports);
+
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+  render() {
+    return (
+      <Router>
+        <Navbar bg="dark" variant="dark">
+          <Navbar.Brand href="#home">Letus</Navbar.Brand>
+        </Navbar>
+        <Route
+          render={({ location }) => {
+            return (
+              <Switch location={location}>
+                <Route exact path="/" render={props => <Home {...props} />} />
+                <Route path="/owner" render={props => <OwnerEntry {...props} />} />
+                <Route path="/gardener" render={props => <GardenerEntry {...props} />} />
+              </Switch>
+            );
+          }}
+        />
+      </Router>
+    );
+  }
 }
-
-export default App;
